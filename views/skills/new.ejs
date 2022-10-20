@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <a href="../..">Home</a>
+    <a href="..">Skills</a>
+    <h1><%= title %></h1>
+    <h3>Add a New Dev Skill</h3>
+    <form action="/skills" method="POST">
+        <input type="text" name="skill">
+        <button type="submit" >Add Skill</button>
+    </form>
+    </ul>
+  </body>
+</html>

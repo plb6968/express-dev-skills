@@ -5,7 +5,20 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <a href=".">Home</a>
+    <a href="..">Home</a>
     <h1><%= title %></h1>
+    
+    <ul>
+
+      <% skills.forEach(function(skill) { %>
+
+        <li>
+          <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
+          -
+          <%= skill.aquired ? 'aquired' : 'not aquired' %>
+        </li>
+      <% }); %>
+    </ul>
+    <a href="/skills/new">Add a New Skill</a>
   </body>
 </html>
