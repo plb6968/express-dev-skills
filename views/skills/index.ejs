@@ -6,6 +6,8 @@
   </head>
   <body>
     <a href="..">Home</a>
+    <a href="/skills/new">New Skill</a>
+    
     <h1><%= title %></h1>
     
     <ul>
@@ -13,12 +15,18 @@
       <% skills.forEach(function(skill) { %>
 
         <li>
+          <form
+          action="/skills/<%= skill.id %>?_method=DELETE"
+          method="POST"
+          class="delete-form"
+          >
+            <button type="submit">X</button>
+          </form>
           <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
           -
           <%= skill.aquired ? 'aquired' : 'not aquired' %>
         </li>
       <% }); %>
     </ul>
-    <a href="/skills/new">Add a New Skill</a>
   </body>
 </html>
